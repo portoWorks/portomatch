@@ -17,7 +17,7 @@ You have files in two places — a working folder and a backup drive, a download
 - **Target** — the folder you want to clean up (e.g. your downloads or staging folder)
 - **Reference** — the folder that has the authoritative copies (e.g. your backup drive or photo library)
 
-The app scans both. The reference folder is never modified.
+The app scans both. Nothing is ever deleted from the reference folder.
 
 If you choose a different folder after a scan (Browse, the dropdown, Recent pairs, or Enter in the field), the app asks whether to rescan right away. Say No to keep the current results; the button then reads **Update Results** until you rescan.
 
@@ -63,7 +63,7 @@ Rejecting is a verdict on the *file*, not on the match: "I don't want this one",
 - Press **X** (or right-click → **Reject**) on selected files in any view, including the target side of the Partial and Reconcile panes. They leave that view and appear under the **🚫 Rejected** button.
 - The Rejected view has a **Match** column that says why each file was there (Exact, Visual 94%, Partial, Unmatched, …).
 - From there: **Move to _Rejected** (a `_Rejected` folder under Target, subfolders kept), **Prefix names** (renames in place with `Rejected_`, right-click → Remove prefix to reverse), **Delete** (your usual deletion mode), or **Unreject** (X) to put a file back where it came from.
-- Sidecar files (.xmp, .json) follow the photo; moves and renames can be undone for 10 seconds and are recorded in `folder_comparator_rejections.csv`. Re-Compare keeps your rejections. The reference folder is never touched.
+- Sidecar files (.xmp, .json) follow the photo; moves and renames can be undone for 10 seconds and are recorded in `folder_comparator_rejections.csv`. Re-Compare keeps your rejections. Nothing is ever deleted from the reference folder.
 - Rejections are remembered. They are saved in scan snapshots (File → Save Snapshot) and in the match state the app offers to save when you quit, and re-applied the next time you scan the same two folders (a file that changed since is not rejected again).
 
 ---
@@ -101,9 +101,9 @@ The app has deep support for photos and videos:
 
 ## What it will never do
 
-- Modify, move, or delete anything in the **Reference** folder
-- Delete a file without first confirming it exists in the reference
-- Delete a file marked **Unmatched** — those are files with no confirmed copy
+- Delete, move or overwrite anything in the **Reference** folder (the only thing that can reach it is a copy you explicitly promote into it)
+- Propose a deletion without first confirming a copy exists in the reference
+- Treat a file marked **Unmatched** as safe to delete — those are files with no confirmed copy; deleting one is only possible after you reject it yourself and confirm the deletion
 
 ---
 
