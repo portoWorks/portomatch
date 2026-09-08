@@ -124,12 +124,14 @@ Your key activates on up to 3 computers. To move it to a new machine, open
 
 ## Privacy
 
-portoMatch talks to the network for exactly two things. The update check can be switched
-off in Settings; the licence check only happens if you activated a Lemon Squeezy key:
+portoMatch talks to the network for exactly two things, and never on its own without you
+clicking something. The update prompt can be switched off in Settings; the licence check
+only happens if you activated a Lemon Squeezy key:
 
-- **Update check** (once a day, or on demand via Help → Check for Updates…): fetches one
-  small JSON file listing the latest release from this GitHub repo. Sends only an
-  app-name/version header — nothing about you or your files.
+- **Update check** (about once a month portoMatch asks "Check for updates now?" — nothing
+  is fetched unless you click Check; Help → Check for Updates… always works on demand):
+  fetches one small JSON file listing the latest release from this GitHub repo. Sends only
+  an app-name/version header — nothing about you or your files.
 - **Pro licence activation and re-validation** (only if you've entered a Lemon Squeezy
   key): sends the key and this machine's name to Lemon Squeezy once to activate, then a
   short silent re-check about once a week. Nothing about your files or usage.

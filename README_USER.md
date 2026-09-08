@@ -109,12 +109,15 @@ The app has deep support for photos and videos:
 
 ## Updates
 
-Once a day (and whenever you use **Help → Check for Updates…**), the app fetches one small JSON file from GitHub to see whether a newer version is available. That is the only thing it does:
+portoMatch never checks for updates on its own. About once a month it shows a small
+in-app notice — "Check for updates now?" with **Check** and **Not now** — and only
+clicking **Check** fetches anything. Either answer resets the month. **Help → Check for
+Updates…** always works for an on-demand check, any time.
 
-- **What is fetched:** the latest release information (version number, download page link, release notes) from the project's public GitHub page — nothing else.
+- **What is fetched (only when you click Check):** the latest release information (version number, download page link, release notes) from the project's public GitHub page — nothing else.
 - **What is sent:** nothing about you or your files. The request carries no personal data, just an app-name/version header so GitHub can see which app is asking.
-- **How to turn it off:** uncheck **Check for updates once a day** in Settings → General. The Help menu entry still works for a manual, one-off check.
-- **What it never does:** the app never downloads or installs anything by itself. If a newer version exists, it only shows you a link to the download page — you decide whether to get it.
+- **How to turn it off:** uncheck **Ask me once a month whether to check for updates** in Settings → General. The Help menu entry still works for a manual, one-off check.
+- **What it never does:** the app never downloads or installs anything by itself, and never connects to the network without you clicking Check. If a newer version exists, it only shows you a link to the download page — you decide whether to get it.
 
 ---
 
@@ -169,4 +172,4 @@ portoMatch is free for personal use. A Pro licence removes the periodic notice a
 
 ---
 
-*portoMatch by portoWorks — version 2.1*
+*portoMatch by portoWorks — version 1.2*
