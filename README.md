@@ -64,9 +64,10 @@ Most "duplicate finders" happily delete whatever they flag. portoMatch is built 
 ## Download
 
 Grab the latest `portoMatch-X.Y-win64.zip` from [Releases](../../releases/latest),
-unzip it anywhere, and run `portoMatch.exe`. No installer, no admin rights. Your settings,
-licence, caches and audit logs live right next to the exe; the only things that go to the
-Windows temp folder are the thumbnail cache and the exe's own unpacked runtime.
+unzip it anywhere, and run `portoMatch.exe` inside the `portoMatch` folder it unzips to.
+No installer, no admin rights. Your settings, licence, caches and audit logs live right
+next to the exe, inside that folder; the only thing that goes to the Windows temp folder
+is the thumbnail cache.
 
 ### About the SmartScreen warning
 
@@ -75,6 +76,7 @@ will show **"Windows protected your PC"** the first time you run it. Click **Mor
 Run anyway**. This is standard for small, independently-published Windows software — it
 means Windows hasn't seen this specific file before, not that anything is wrong with it.
 Check the `.sha256` file next to the zip if you want to verify the download yourself.
+Every release's notes also carry a VirusTotal report link for that exact zip.
 
 ---
 

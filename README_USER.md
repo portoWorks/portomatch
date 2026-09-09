@@ -172,4 +172,4 @@ portoMatch is free for personal use. A Pro licence removes the periodic notice a
 
 ---
 
-*portoMatch by portoWorks — version 1.2*
+*portoMatch by portoWorks — version 1.3*
