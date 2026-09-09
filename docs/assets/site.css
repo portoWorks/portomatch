@@ -1,0 +1,189 @@
+/* portoMatch landing page — Catppuccin Mocha (same palette as the app,
+   fc/ui/theme.py's P dict). No external fonts, no JS. */
+
+:root {
+  --bg: #1e1e2e;
+  --surface: #181825;
+  --overlay: #313244;
+  --text: #cdd6f4;
+  --subtext: #a6adc8;
+  --blue: #89b4fa;
+  --green: #a6e3a1;
+  --peach: #fab387;
+  --red: #f38ba8;
+  --crust: #11111b;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a { color: var(--blue); }
+a:hover { text-decoration: none; }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.hero {
+  text-align: center;
+  padding: 56px 24px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--overlay);
+}
+
+.hero img.icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 2.2rem;
+}
+
+.tagline {
+  color: var(--subtext);
+  font-size: 1.1rem;
+  margin: 0 0 18px;
+}
+
+.short-desc {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--crust);
+}
+
+.btn-buy {
+  background: var(--peach);
+  color: #11111b;
+}
+
+.btn-disabled {
+  background: var(--overlay);
+  color: var(--subtext);
+  cursor: default;
+}
+
+.hero .fineprint {
+  margin-top: 14px;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+.hero img.shot {
+  max-width: 100%;
+  margin-top: 32px;
+  border-radius: 10px;
+  border: 1px solid var(--overlay);
+}
+
+section {
+  padding: 40px 24px;
+  border-bottom: 1px solid var(--overlay);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.tier-table th, .tier-table td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--overlay);
+}
+
+.tier-table th {
+  color: var(--subtext);
+  font-weight: 600;
+}
+
+.shots img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--overlay);
+  margin: 12px 0 24px;
+  display: block;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 720px) {
+  .pricing { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.7rem; }
+}
+
+.pricing ul {
+  padding-left: 20px;
+}
+
+.pricing li {
+  margin-bottom: 8px;
+}
+
+.buy-box {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.buy-box .price-line {
+  margin-top: 10px;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+.smartscreen {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--overlay);
+  font-size: 0.92rem;
+  color: var(--subtext);
+}
+
+footer {
+  text-align: center;
+  padding: 32px 24px 48px;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+footer a { margin: 0 8px; }
